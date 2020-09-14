@@ -4,9 +4,9 @@
     "topic_tags" : 
     {"Q102350": "Bytom"},
     "direction": "in",
-    "tokens": ["[CLS]", "which", 
-    "administrative", "country", 
-    "subdivision", "is", "next", 
-    "to", "the", "border", "of", 
-    "bytom", "?", "[SEP]"]
+    "tokens": ["[CLS]", "which", "administrative", "country", 
+               "subdivision", "is", "next", "to", "the", 
+               "border", "of", "bytom", "?", "[SEP]"]
 }
+
+
