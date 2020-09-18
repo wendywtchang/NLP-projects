@@ -1,0 +1,12 @@
+{     
+    "id": "12",
+    "relation" : "P47",
+    "topic_tags" : 
+    {"Q102350": "Bytom"},
+    "direction": "in",
+    "tokens": ["[CLS]", "which", "administrative", "country", 
+               "subdivision", "is", "next", "to", "the", 
+               "border", "of", "bytom", "?", "[SEP]"]
+}
+
+
