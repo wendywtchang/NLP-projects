@@ -2,7 +2,7 @@
 > This is a project of building a LDA (& dynamic LDA) model to cluster topics in Covid-19 dataset.  
   
 > Covid-19 dataset: Covid-19 related articles from [@PubMed](https://pubmed.ncbi.nlm.nih.gov/).  
-> Goal: Cluster topics and subtopics in Covid-19 dataset to find the hidden semantic structure.
+> Goal: Cluster topics and subtopics in Covid-19 dataset to find the hidden semantic structure.  
 > Futurework: Dynamic, embedding, dynamic embedding, integration with supervised learning, summarization.  
   
 
