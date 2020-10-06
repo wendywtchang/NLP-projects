@@ -1,5 +1,5 @@
 # Course Project
-> Each directory has one small project from courses in Uni!
+> Each directory has one small project from courses in Uni!  
 > For detailed information, please click into the directory you're interested.
 
 ## Introduction
