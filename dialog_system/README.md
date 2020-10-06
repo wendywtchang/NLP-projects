@@ -1,4 +1,4 @@
-# Dialog system  
+# Relation prediction model in dialog system:   
 > This is a project of building a relation predictor in semantic parser of an knowledge base question answering system.  
   
 > Dataset: KBQA dataset of Wikidata build by [@csqa](https://amritasaha1812.github.io/CSQA/).  
