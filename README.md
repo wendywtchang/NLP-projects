@@ -35,4 +35,4 @@
   * Building an ASR system by using kaldi toolkit with Mandarin-English codeswitching dataset SEAME.
 
 ## Contact
-Created by [@wendywtchang](<mailto:wentseng.chang@gmail.com>) - feel free to contact me!
+Feel free to contact me! [@wendywtchang](<mailto:wentseng.chang@gmail.com>) 
