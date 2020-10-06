@@ -15,11 +15,14 @@
 * [Demo](#demo)
 
 ## Model   
-* MLP  
-* Bert embeddings  
+* MLP: Multilayer perceptron, a simple and efficient neural network model.  
+* Bert embeddings: Contextualized word embeddings.  
 
 ## Integration  
-* Adviser dialog system  
+* Adviser dialog system: 
+* Open-source multi-modal dialog system. 
+* Use Publish/Subscribe pattern.
+* Allows developers to test their own design with sub-modules and to flexibly integrate them into the system.
 
 ## Toolkits
 * pytorch 
