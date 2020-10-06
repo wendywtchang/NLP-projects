@@ -16,17 +16,20 @@
 
 ## Model   
 * MLP  
-* Embeddings  
+* Bert embeddings  
 
 ## Integration  
 * Adviser dialog system  
 
 ## Toolkits
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
+* pytorch 
+* tensorflow
 
 ## Setup
+1. install adviser toolkits & environment   
+2. Add `dialog_system` file under the directory: `adviser/adviser/examples/qa/` and change the file name into `semanticparser`
+3. Run `run_chat_mlp.py` under `adviser/adviser/examples/qa/`
+
 Describe how to install / setup your local environement / add link to demo version.
 
 ## Usage
@@ -34,10 +37,10 @@ Show examples of usage:
 `put-your-code-here`
 
 ## Demo
-List of features ready and TODOs for future development  
-![Example screenshot](./img/screenshot.png)
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+Here is a demo of using adviser system in QA domain with our model.  
+![Adviser QA Demo](./img/adviser_demo.png)  
+
+* It can answer simple worldwide knowledge questions. (latest update: Oct. 2020)
+* The model reaches macro F1 83%
 
 
