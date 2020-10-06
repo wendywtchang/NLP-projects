@@ -21,7 +21,7 @@ Using Pytorch and BERT model.
 
 
 ## Topic Modeling
-* #### Topic Modeling in COVID-19 Papers in Biomedical Field
+* #### Topic Modeling in COVID-19 Papers in PubMed
 * Apply LDA model, an unsupervised approach, to explore different topics in abstracts of COVID-19 papers.
 
 ## Emotion analysis
