@@ -29,7 +29,7 @@
 * tensorflow
 
 ## Setup
-1. install adviser toolkits & environment   
+1. Install adviser toolkits & environment   
 2. Add `dialog_system` file under the directory: `adviser/adviser/examples/qa/` and change the file name into `semanticparser`
 3. Run `run_chat_mlp.py` under `adviser/adviser/`
 
