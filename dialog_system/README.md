@@ -30,7 +30,7 @@
 
 ## Setup
 1. Install adviser toolkits & environment   
-2. Add `dialog_system` file under the directory: `adviser/adviser/examples/qa/` and change the file name into `semanticparser`
+2. Add `semanticparser` file under the directory: `adviser/adviser/examples/qa/`  
 3. Run `run_chat_mlp.py` under `adviser/adviser/`
 
 ## Usage
