@@ -8,9 +8,9 @@
 
 ## Overview
 * [Model](#model)
-* [Toolkits](#toolkits)
-* [Setup](#setup)
-* [Semantic structure](#semantic-structure)
+* [Toolkits](#toolkits)  
+* [Setup](#setup)  
+* [Semantic structure](#semantic-structure)  
 
 ## Model   
 * LDA.  
@@ -27,11 +27,11 @@
 * nltk
 * snowball stemmer
 
-## Setup
-1. 
+[//]: ## (Setup) 
 
-## Usage
-1. Enter 
+[//]: ## (Usage) 
+[//]: # (This is a comment.)
+[//]: # (This is a comment on a new line.)
 
 ## Semantic structure
 Here is a demo of a 15 topic clustering result of LDA model.  
