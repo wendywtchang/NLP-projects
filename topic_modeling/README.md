@@ -35,7 +35,7 @@
 
 ## Semantic structure
 Here is a demo of a 15 topic clustering result of LDA model.  
-![15 topic LDA model](./img/)  
+![15 topic LDA model](./img/15tm.png)  
 
 * Feature 1
 * Feature 2
