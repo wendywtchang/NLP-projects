@@ -19,6 +19,7 @@
 * shell (in data preprocessing)  
 
 ## Evaluation metrics
+* For all metrics, lower the better.
 * perplexity  
 * WER (word error rate)  
 * CER (character error rate)  
@@ -33,14 +34,26 @@
 
 * Language Model.  
 * The baseline language model of the N-gram (unigram, bigram, and trigram) with both add-one smoothing and Kneser-Ney smoothing:  
-![Perplexities of Baseline LMs.](./img/lm.png) 
+
+N-gram    | add-one smoothing    | kneser-ney smoothing
+----------| -------------------- | --------------------
+unigram   |   346.842            |   348.595
+bigram    |   599.813            |   161.232
+trigram   |   1127.87            |   157.367
 
 
 ## Results 
-![](./img/wer_cer.png)  
+ 
+Model        | WER           | CER
+------------ | ------------- | -------------
+Baseline     | 64.53%        | 54.06%
+w/o `<pp>`   | 64.37%        | 53.69%
+w/o `<pp>` & `<unk>` | 63.60% | 53.30%
+
+
 
 ## Optimization on LMs.  
-![Perplexities of interpolated AISHELL2](./img/inter.png)  
+![Perplexities of interpolated AISHELL2](./img/inter1.png)  
 
-* CER performs better than WER because it considered the segmentation of Chinese characters and the insertion of pp, unk.  
+* CER performs better than WER because it considered the segmentation of Chinese characters and the insertion of `<pp>`, `<unk>`.  
 * The optimization is not ideal indicates that code-switching is not the simple multiplication of two languages.
