@@ -1,7 +1,7 @@
 # Deep learning in slot filling task:   
 > This is a project of building a neural network model to assign important sentence segments into correct category and BIO tags.  
   
-> Dataset: AI assistant commands, e.g. `Book an Italien restaurant nearby.`  
+> Dataset: AI assistant commands, e.g. `Book an Italien restaurant nearby`.  
 > Goal: Predict 7 categories for each command and recognize BIO tagset.   
   
 
