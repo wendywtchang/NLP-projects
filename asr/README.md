@@ -6,6 +6,8 @@
 > AISHELL2: A monolingual Mandarin corpus, with 1991 speakers of both northern and southern accents and balanced gender of 42.4% male and 57.6% female.  
 > LibriSpeech: A monolingual English corpus. Derived from audio books, part of the LibriVox project,
 > Goal: Build a code-switching ASR system and optimize it in language model.   
+
+> This is a collaboration work with Chunling Song.  
   
 
 ## Overview
