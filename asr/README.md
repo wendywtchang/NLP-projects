@@ -30,7 +30,10 @@
 * Prounciation dictionary.  
 * Used to build the acoustic model. It contains words (lexicon) and corresponding pronunciation (phoneme sequence).  
 * The dictionary includes 16011 English words and 11383 Chinese words with five tones.
-![Normal Phones, Silence Phones, unknown sound(unk), and noise(nos)](./img/pro_dict.png) 
+* Here is an example:
+
+<img src="./img/pro_dict.png" alt="Kitten"
+	title="Normal Phones, Silence Phones, unknown sound(unk), and noise(nos)" width="500"  />
 
 * Language Model.  
 * The baseline language model of the N-gram (unigram, bigram, and trigram) with both add-one smoothing and Kneser-Ney smoothing:  
@@ -53,7 +56,11 @@ w/o `<pp>` & `<unk>` | 63.60% | 53.30%
 
 
 ## Optimization on LMs.  
-![Perplexities of interpolated AISHELL2](./img/inter1.png)  
+
+<img src="./img/inter1.png" alt="Kitten"
+	title="Perplexities of interpolated AISHELL2" width="500"  />
+<img src="./img/inter2.png" alt="Kitten"
+	title="Perplexities of interpolated LibriSpeech" width="500"  />
 
 * CER performs better than WER because it considered the segmentation of Chinese characters and the insertion of `<pp>`, `<unk>`.  
 * The optimization is not ideal indicates that code-switching is not the simple multiplication of two languages.
