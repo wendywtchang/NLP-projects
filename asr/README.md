@@ -10,7 +10,6 @@
 
 ## Overview
 * [Toolkits](#toolkits) 
-* [Model](#model)
 * [Setup](#setup)  
 * [Results](#results)
 
@@ -58,9 +57,9 @@ w/o `<pp>` & `<unk>` | 63.60% | 53.30%
 ## Optimization on LMs.  
 
 <img src="./img/inter1.png" alt="Kitten"
-	title="Perplexities of interpolated AISHELL2" width="500"  />
+	title="Perplexities of interpolated AISHELL2" width="500" height="300"  />
 <img src="./img/inter2.png" alt="Kitten"
-	title="Perplexities of interpolated LibriSpeech" width="500"  />
+	title="Perplexities of interpolated LibriSpeech" width="500" height="300" />
 
 * CER performs better than WER because it considered the segmentation of Chinese characters and the insertion of `<pp>`, `<unk>`.  
 * The optimization is not ideal indicates that code-switching is not the simple multiplication of two languages.
