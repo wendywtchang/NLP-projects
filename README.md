@@ -1,4 +1,4 @@
-# NLP Project
+# NLP Projects
 > Side projects of NLP works.  
 > For detailed information, please click into the directory you're interested.
 
