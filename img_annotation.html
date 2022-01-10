@@ -1,0 +1,253 @@
+<head>
+    <script>
+        function show(shown, hidden) {
+          document.getElementById(shown).style.display='block';
+          document.getElementById(hidden).style.display='none';
+          return false;
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var x = $("form").serializeArray();
+                $.each(x, function(i, field){
+                    $("#results").append(field.name + "_" + field.value + " ");
+                });
+            });
+        });
+    </script>
+
+    <style>
+    .collapsible {
+      background-color: #777;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f1f1f1;
+    }
+    </style>
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+    }
+
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    </style>
+</head>
+
+<body>
+
+    <button type="button" class="collapsible">Click here to see the Instruction!</button>
+    <div class="content">
+        <h1> Instruction </h1>
+        <h2> Task </h2>
+        <p> Help us to label bounding boxes of food ingredients & kitchen utensils in the images from recipes! You will:</p>
+            <ol>
+                <li>Read a recipe, find food ingredients & kitchen utensils and build correct labels.</li>
+                <li>Draw a bounding box for each label. </li>
+            </ol>
+        <hr>
+        <h2> Annotation Steps </h2>
+            <ol>
+                <li>Create labels.</li>
+                  <ul>
+                    <li>Check the image id, it represent this is the imge of which step. "<b>Step 5</b>" means this is the image of <b>step 5</b> in this recipe.</li>
+                    <li>Read the recipe below.</li>
+                      <ul>
+                        <li>Step 1: Dissolve<sub>0</sub> jelly<sub>1</sub> in<sub>2</sub> boiling<sub>3</sub> water.<sub>4</sub></li>
+                        <li>Step 2: Allow<sub>0</sub> to<sub>1</sub> cool.<sub>2</sub></li>
+                        <li>Step 3: Pour<sub>0</sub> evaporated<sub>1</sub> milk<sub>2</sub> into<sub>3</sub> a<sub>4</sub> bowl.<sub>5</sub></li>
+                        <li>Step 4: Add<sub>0</sub> jelly<sub>1</sub> and<sub>2</sub> mix<sub>3</sub> well.<sub>4</sub></li>
+                        <li><b>Step 5: Pour<sub>0</sub> mixture<sub>1</sub> into<sub>2</sub> 4<sub>3</sub> individual<sub>4</sub> glass<sub>5</sub>
+                          bowls<sub>6</sub> or<sub>7</sub> glasses.<sub>8</sub></b></li>
+                        <li>Step 6: Allow<sub>0</sub> to<sub>1</sub> set<sub>2</sub> in<sub>3</sub> the<sub>4</sub> fridge<sub>5</sub> for<sub>6</sub> 1-2<sub>7</sub> hours.<sub>8</sub></li>
+                      </ul>
+                      <li>Find food ingredients and kitchen utensils according to the Image ID (here: Step 5), create a label list.
+                      Find the word(s) that is a food ingredient or a kitchen utensil, fill in the subscript that follows the word(s) in parentheses with underline.</li>
+                        <p>For example:</p>
+                        <ul>
+                          <li>mixture_(1,1)</li>
+                          <li>glass_bowls_(5,6)</li>
+                          <li>glasses_(8,8)</li>
+                        </ul>
+                  </ul>
+                <br>
+                <li>Draw the bounding boxes.</li>
+                <ul>
+                  <li>After you've prepared the label list, please look at the image below. Click the "instruction" button on the left column.
+                    You will see a text box that allows you to create labels for bounding boxes. </li>
+                    <br>
+                    <img src="https://corefrecipebucket.s3.eu-central-1.amazonaws.com/img_ins/img_ins_01.jpg" alt="ins_01" width="800">
+                    <br>
+                  <li>Add new label (e.g. "mixture_(1,1)") and click "Add" button. </li>
+                    <br>
+                    <img src="https://corefrecipebucket.s3.eu-central-1.amazonaws.com/img_ins/img_ins_02.jpg" alt="ins_02" width="800">
+                    <br>
+                  <li>The label you created will show in the right column. You only need to create the label that appears in the image.
+                    In this case, for example, you only create "mixture_(1,1)" and "glasses_(8,8)". You do not need to enter "glass_bowls_(5,6)". </li>
+                    <br>
+                    <img src="https://corefrecipebucket.s3.eu-central-1.amazonaws.com/img_ins/img_ins_04.jpg" alt="ins_04" width="800">
+                    <br>
+                  <li>Click the label "mixture_(1,1)" on the right side, and create the bounding box for the object.
+                    Please remember: <u><b>the bounding box should contain all the object that is shown in the image *and* as tight as possible.</b></u></li>
+                    <p>For example, the bounding box of  "mixture" should contain the pink liquid in the upper spoon and the rest in the glass. </p>
+                    <br>
+                    <img src="https://corefrecipebucket.s3.eu-central-1.amazonaws.com/img_ins/img_ins_05.jpg" alt="ins_05" width="800">
+                    <br>
+                    <p>Here is another example. The image on the right side is a wrong example; while the one on the right side is a correct bounding box.</p>
+                    <div class="row">
+                      <div class="column">
+                        <img src="https://corefrecipebucket.s3.eu-central-1.amazonaws.com/img_ins/ins_sample_wrong.jpg" alt="wrong" style="width:400">
+                      </div>
+                      <div class="column">
+                        <img src="https://corefrecipebucket.s3.eu-central-1.amazonaws.com/img_ins/ins_sample_ok.jpg" alt="correct" style="width:400">
+                      </div>
+                    </div>
+                    <br>
+                  <li>You can adjust or reset the bounding box, or delete the label in the left column.
+                    If you find everything is good, click "Submit" button on the right side below.</li>
+
+                      <br>
+                      <img src="https://corefrecipebucket.s3.eu-central-1.amazonaws.com/img_ins/img_ins_07.jpg" alt="ins_06" width="800">
+                      <br>
+                </ul>
+
+
+
+            </ol>
+        <hr>
+    </div>
+
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+<div id="Task" >
+<h1> Recipe Title: ${title} </h1>
+
+
+<h3>Image labeling: Bounding Box </h3>
+
+    <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+    <crowd-form answer-format="flatten-objects">
+
+    <h4> This is the image of Step ${step_num} </h4>
+    <h4> Text Recipe Instructions: </h4>
+    <p> <b>Step ${step_num}</b>: ${subscript} </p>
+
+    <br>
+
+    <p>After reading the recipe above, please annotate the food/ kitchen utensils objects bounding box below. </p>
+    <p>Click the "instructions" button to create the labels.  </p>
+
+    <crowd-bounding-box
+    id="annotator"
+    name="img_s1"
+    src=${img_src}
+    header="Please add labels and draw boxes around each item"
+    labels="['placeholder']"
+    >
+        <short-instructions>
+          Create the labels according to the image and referring step.
+
+          <br><br><br>
+          <h3>
+            Add new label
+          </h3>
+
+          <crowd-input name="_customLabel" id="customLabel"></crowd-input>
+          <br>
+          <crowd-button id="addLabel">Add</crowd-button>
+
+          <br><br><br>
+          <h3>
+          Manage labels
+          </h3>
+          <div id="labelsSection"></div>
+        </short-instructions>
+        <!--
+        <full-instructions>
+          Describe your task in more detail here.
+        </full-instructions>
+        -->
+    </crowd-bounding-box>
+
+
+    <script>
+      document.addEventListener('all-crowd-elements-ready', function(event) {
+        document.querySelector('crowd-bounding-box').labels = [];
+      });
+
+      function populateLabelsSection() {
+        labelsSection.innerHTML = '';
+        annotator.labels.forEach(function(label) {
+          const labelContainer = document.createElement('div');
+          labelContainer.innerHTML = label + ' <a href="javascript:void(0)">(Delete)</a>';
+          labelContainer.querySelector('a').onclick = function() {
+            annotator.labels = annotator.labels.filter(function(l) {
+              return l !== label;
+            });
+            populateLabelsSection();
+          };
+          labelsSection.appendChild(labelContainer);
+        });
+      }
+
+      addLabel.onclick = function() {
+        annotator.labels = annotator.labels.concat([customLabel.value]);
+        customLabel.value = null;
+
+        populateLabelsSection();
+      };
+    </script>
+
+
+
+
+
+
+
+    </crowd-form>
+
+
+</body>

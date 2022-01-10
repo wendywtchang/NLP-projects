@@ -1,0 +1,268 @@
+<head>
+    <script>
+        function show(shown, hidden) {
+          document.getElementById(shown).style.display='block';
+          document.getElementById(hidden).style.display='none';
+          return false;
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var x = $("form").serializeArray();
+                $.each(x, function(i, field){
+                    $("#results").append(field.name + "_" + field.value + " ");
+                });
+            });
+        });
+    </script>
+    <script>
+      document.addEventListener('all-crowd-elements-ready', () => {
+        document
+          .querySelector('crowd-entity-annotation')
+          .shadowRoot
+          .querySelector('crowd-form')
+          .form
+          .appendChild(additionalQuestions);
+      });
+    </script>
+
+    <style>
+    .collapsible {
+      background-color: #777;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f1f1f1;
+    }
+    </style>
+</head>
+
+<body>
+
+    <button type="button" class="collapsible">Click here to see the Instruction!</button>
+    <div class="content">
+        <h1> Instruction </h1>
+        <h2> Task </h2>
+        <p> Highlight and label food ingredients & kitchen utensils in the recipe! </p>
+        <p> You will read a recipe, find food ingredients & kitchen utensils, and label them into different groups.</p>
+
+        <hr>
+        <h2> Annotation Steps </h2>
+        <h3> Task 1: Labeling Task </h3>
+            <ol>
+                <li>You will first see an ingredients list, this is a list that tells you each of the ingredient should be labeled in different group.</li>
+                <br>
+                <img src="https://corefrecipebucket.s3.eu-central-1.amazonaws.com/text_ins/text_ins_1.jpg" alt="ins_01" width="800">
+                <br><br>
+
+
+                <li> Please find all the food ingredients & kitchen utensils words in the instructions. The ingredients list is for your reference. You can see the annotation box with recipe text on the left and label set on the right side.</li>
+                  <br>
+                  <img src="https://corefrecipebucket.s3.eu-central-1.amazonaws.com/text_ins/text_ins_2.jpg" alt="ins_02" width="800">
+                  <br><br>
+                <p>- Click the label (e.g. Group 2), and then select the word(s) that you want to label. The result should look like the image below.</p>
+                  <br>
+                  <img src="https://corefrecipebucket.s3.eu-central-1.amazonaws.com/text_ins/text_ins_3.jpg" alt="ins_03" width="800">
+                  <br><br>
+                <p>- You've assigned the word "wet ingredients" into "Group 1" & "butter" into "Group 2"!</p>
+                <hr>
+                <h3 style="color:#FF5733">Here are rules that you need to notice!</h3>
+                <br>
+                <img src="https://corefrecipebucket.s3.eu-central-1.amazonaws.com/text_ins/text_ins_4.jpg" alt="ins_04" width="800">
+                <br><br>
+                <ul>
+                  <li><p> Not only food ingredients, but also <b>kitchen utensils</b> should be labeled. (e.g. "microwave" in "Group 3")</p></li>
+                  <li><p> A food ingredient or a kitchen utensil may contains <b>more than one word</b>. (e.g. "maple syrup" in "Group 7", "egg white" in "Group 18")</p></li>
+                  <li><p><b>Pronoun</b> such as <b>"it"</b> (in G17, G18), <b>"they"</b> (in G16), <b>"everything"</b> (in G8) which refers to a food ingredient/kitchen utensil object should also be labeled.</p></li>
+                  <li> You can <b>fix</b> the label by clicking "cross mark button" above the word. (e.g. delete "ones" in "Group 10" because it is a wrong annotation.) </li>
+                  <br>
+                  <li> If the word(s) of food ingredient/kitchen utensil <b>refers to the same object (the real "thing" in the world),
+                    use the initial label.</b>
+                    <p>Please see the image below:</p>
+                      <p>After reading the recipe, you think the word "wet ones" is equal to "wet ingredients" in "Group 1".
+                    Therefore, you should delete the wrong annotation in the former step and reassign it into "Group 1".</p></li>
+                </ul>
+                <br>
+                <img src="https://corefrecipebucket.s3.eu-central-1.amazonaws.com/text_ins/text_ins_5.jpg" alt="ins_05" width="800">
+                <br><br>
+
+                <li>If the recipe uses both plural and single word to refer same food object. And the the food object is <b>not</b> separated into differet usage (e.g. one half is roasted and the other half is boiled). </li>
+                <p>Label them in the same group.</p>
+                <p>For example:</p>
+                <p> "If the <b>purple sweet potatoes</b> are ready, the fork should slide into the <b>chunk</b> easily..."</p>
+                <p style="color:purple">-> "purple sweet potatoes" and "chunk" should be in the same group.</p>
+
+
+            </ol>
+
+        <h3> Task 2: Answer 3 Questions </h3>
+          <ol>
+            <li>You will see short three quesitons after the labeling task.</li>
+            <br>
+            <img src="https://corefrecipebucket.s3.eu-central-1.amazonaws.com/text_ins/text_ins_6.jpg" alt="ins_06" width="800">
+            <br><br>
+            <ul>
+              <li><b>Q1: If you need to use more than 35 labels, please enter "group number" + ":" + "[word(s)_step number]" as the example below.</b></li>
+                <p> If you run out of the labels (we provide 35 labels in the label set), please enter new labels and words in this format: </p>
+                <p style="color:purple"> -> G36:[fish_s5], G37:[orange_juice_s4, it_s5] ...</p>
+                <p> If you don't need to add more labels, just type "None".</p>
+
+              <li><b>Q2: If there is any mixed food material, please enter "word(s)" + "_" + "group number" as the example below. </b></li>
+                <p> Mixed material: dough, batter, seasoned_salad, etc. A mixed material is a mixing product of several other small materials. For example: a "batter(G17)" is a mixture of "buckwheat flour(G12)", "baking soda(G13), "baking soda", and so on.</p>
+                <p style="color:purple"> Therefore, please enter "batter_G17" in the text box below. </p>
+                <p> However, if there are two words in the same group. For example: "wet ingredients" & "wet ones" are both mixed material. You only need to enter one (e.g. wet_ingredients_G1) in the text box.</p>
+                <p> If there is no mixed food material, just type "None".</p>
+
+              <li><b>Q3: If there is any partial food material, please enter "word(s)" + "_" + "group number" as the example below. </b></li>
+                <p> Partial material: potato skin, fish_scales ,  wedges, etc. A partial material is a part of small material (e.g. lemon wedges) from other big material (e.g. lemon) with different usage.</p>
+                <p> Here is another recipe with partial material:</p>
+                <p> "Cut the <u>lemon</u> in half... Squeeze <u>one half</u> into <u>juice</u>. Cut <u>the other half</u> into <u>wedges</u> and decorate <u>them</u> on the plate."</p>
+                <ul>
+                  <li>lemon: a whole lemon. -> lemon_G1.</li>
+                  <li>one_half: a half of lemon with pulp and peel that is used for making lemonade. -> one_half_G2</li>
+                  <li>juice: it only refers to a liquid object. -> juice_G3</li>
+                  <li>the_other_half: the other half of lemon. -> the_other_half_G4 </li>
+                  <li>wedges: the other half of lemon cut into wedges. -> wedges_G4</li>
+                  <li>them: the pronoun that refers to the wedges. them_G4</li>
+                </ul>
+                <p style="color:purple">Please enter:  -> one_half_G2, juice_G3, the_other_half_G4 <p>
+                <p> If there is no partial food material, just type "None".</p>
+            </ul>
+          </ol>
+
+
+        <h3>You can fix your answer anytime before you submit. Have fun!</h3>
+        <hr>
+    </div>
+
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+<div id="Task" >
+<h1> Recipe Title: ${title} </h1>
+<h2> Ingredients list <br> </h2>
+<p> ${ingredients} </p>
+
+<h3>Text labeling: Coreference Clustering </h3>
+
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<!--<crowd-form>-->
+<crowd-entity-annotation
+  name="crowd-entity-annotation"
+  header="Highlight food ingredients/kitchen utensils word(s) in the recipe text below."
+  labels = "[{'label': 'G1', 'shortDisplayName': 'G1', 'fullDisplayName': 'Group 1'},
+  {'label': 'G2', 'shortDisplayName': 'G2', 'fullDisplayName': 'Group 2'},
+  {'label': 'G3', 'shortDisplayName': 'G3', 'fullDisplayName': 'Group 3'},
+  {'label': 'G4', 'shortDisplayName': 'G4', 'fullDisplayName': 'Group 4'},
+  {'label': 'G5', 'shortDisplayName': 'G5', 'fullDisplayName': 'Group 5'},
+  {'label': 'G6', 'shortDisplayName': 'G6', 'fullDisplayName': 'Group 6'},
+  {'label': 'G7', 'shortDisplayName': 'G7', 'fullDisplayName': 'Group 7'},
+  {'label': 'G8', 'shortDisplayName': 'G8', 'fullDisplayName': 'Group 8'},
+  {'label': 'G9', 'shortDisplayName': 'G9', 'fullDisplayName': 'Group 9'},
+  {'label': 'G10', 'shortDisplayName': 'G10', 'fullDisplayName': 'Group 10'},
+  {'label': 'G11', 'shortDisplayName': 'G11', 'fullDisplayName': 'Group 11'},
+  {'label': 'G12', 'shortDisplayName': 'G12', 'fullDisplayName': 'Group 12'},
+  {'label': 'G13', 'shortDisplayName': 'G13', 'fullDisplayName': 'Group 13'},
+  {'label': 'G14', 'shortDisplayName': 'G14', 'fullDisplayName': 'Group 14'},
+  {'label': 'G15', 'shortDisplayName': 'G15', 'fullDisplayName': 'Group 15'},
+  {'label': 'G16', 'shortDisplayName': 'G16', 'fullDisplayName': 'Group 16'},
+  {'label': 'G17', 'shortDisplayName': 'G17', 'fullDisplayName': 'Group 17'},
+  {'label': 'G18', 'shortDisplayName': 'G18', 'fullDisplayName': 'Group 18'},
+  {'label': 'G19', 'shortDisplayName': 'G19', 'fullDisplayName': 'Group 19'},
+  {'label': 'G20', 'shortDisplayName': 'G20', 'fullDisplayName': 'Group 20'},
+  {'label': 'G21', 'shortDisplayName': 'G21', 'fullDisplayName': 'Group 21'},
+  {'label': 'G22', 'shortDisplayName': 'G22', 'fullDisplayName': 'Group 22'},
+  {'label': 'G23', 'shortDisplayName': 'G23', 'fullDisplayName': 'Group 23'},
+  {'label': 'G24', 'shortDisplayName': 'G24', 'fullDisplayName': 'Group 24'},
+  {'label': 'G25', 'shortDisplayName': 'G25', 'fullDisplayName': 'Group 25'},
+  {'label': 'G26', 'shortDisplayName': 'G26', 'fullDisplayName': 'Group 26'},
+  {'label': 'G27', 'shortDisplayName': 'G27', 'fullDisplayName': 'Group 27'},
+  {'label': 'G28', 'shortDisplayName': 'G28', 'fullDisplayName': 'Group 28'},
+  {'label': 'G29', 'shortDisplayName': 'G29', 'fullDisplayName': 'Group 29'},
+  {'label': 'G30', 'shortDisplayName': 'G30', 'fullDisplayName': 'Group 30'},
+  {'label': 'G30', 'shortDisplayName': 'G30', 'fullDisplayName': 'Group 31'},
+  {'label': 'G30', 'shortDisplayName': 'G30', 'fullDisplayName': 'Group 32'},
+  {'label': 'G30', 'shortDisplayName': 'G30', 'fullDisplayName': 'Group 33'},
+  {'label': 'G30', 'shortDisplayName': 'G30', 'fullDisplayName': 'Group 34'},
+  {'label': 'G30', 'shortDisplayName': 'G30', 'fullDisplayName': 'Group 35'}]"
+
+  text = ${text}
+>
+    <!--text=${text}-->
+  <full-instructions header="Named entity recognition instructions">
+    <ol>
+      <li><strong>Read</strong> the text carefully.</li>
+      <li><strong>Highlight</strong> words, phrases, or sections of the text.</li>
+      <li><strong>Choose</strong> the label that best matches what you have highlighted.</li>
+      <li>To <strong>change</strong> a label, choose highlighted text and select a new label.</li>
+      <li>To <strong>remove</strong> a label from highlighted text, choose the X next to the abbreviated label name on the highlighted text.</li>
+      <li>You can select all of a previously highlighted text, but not a portion of it.</li>
+    </ol>
+  </full-instructions>
+
+  <short-instructions>
+    Apply labels to words or phrases.
+  </short-instructions>
+</crowd-entity-annotation>
+
+  <div id="additionalQuestions" style="margin-top: 20px">
+    <ol>
+      <h4>
+        <li>If you need to use more than 35 labels, please enter "group number" + ":" + "[word(s)_step number]" as the example below.</li>
+      </h4>
+      <crowd-text-area name="more_labels" rows="1" placeholder="example: G36:[fish_s5], G37:[orange_juice_s4, it_s5] ..." required></crowd-text-area>
+
+      <!--<crowd-radio-group>
+        <crowd-radio-button name="enough" value="enough">Enough</crowd-radio-button>
+        <crowd-radio-button name="too_few" value="too_few">Too few</crowd-radio-button></crowd-radio-group>-->
+
+        <h4>
+          <li>If there is any <b>mixed</b> food material, please enter "word(s)" + "_" + "group number" as the example below.</li>
+        </h4>
+        <crowd-text-area name="mixed" rows="1" placeholder="example: dough_G1, mixture_G2 ..." required></crowd-text-area>
+
+        <h4>
+          <li>If there is any <b>partial</b> food material, please enter "word(s)" + "_" + "group number" as the example below.</li>
+        </h4>
+        <crowd-text-area name="partial" rows="1" placeholder="example: fish_scales_G3, lemon wedges_G4 ..." required></crowd-text-area>
+
+
+    </div>
+<!--</crowd-form>-->
+
+
+
+
+</body>
