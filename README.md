@@ -8,6 +8,7 @@
 * [Topic Modeling](#topic-modeling)
 * [Emotion analysis](#emotion-analysis)
 * [Auromatic Speech Recognition](#auromatic-speech-recognition)
+* [Annotation Samples](#annotation-samples)
 
 ## Deep learning
 * #### Slot Filling Task
@@ -33,6 +34,11 @@
 ## Auromatic Speech Recognition
 * #### ASR in Mandarin-English Code-Switching Dataset
   * Building an ASR system by using kaldi toolkit with Mandarin-English codeswitching dataset SEAME.
+
+## Annotation Samples
+* #### The design layout of the annotation on Amazon Mechanical Turk.
+  * Includeing two annotation design pages: coreference (text) annotation & image (bounding box) annotation 
+  * Using HTML, CSS, Javascript and Amazon Crowd HTML Elements.
 
 ## Contact
 Feel free to contact me! [@wendywtchang](<mailto:wentseng.chang@gmail.com>) 
