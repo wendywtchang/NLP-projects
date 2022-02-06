@@ -1,5 +1,5 @@
 # Language Model 
-## Dataset: Sherlock Holmes
+- Dataset: Sherlock Holmes
 - Hound: train/dev (80:20), test
 
 ## Logs
