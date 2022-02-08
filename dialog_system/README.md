@@ -5,7 +5,6 @@
 > Goal: To predict the relation connection between subject & object entities.  
 > Integration: Adviser dialog system framework [@adviser](digitalphonetics.github.io/adviser/).  
   
-> This is a collaboration work with [@e-tony](https://github.com/e-tony).
 
 ## Overview
 * [Model](#model)
