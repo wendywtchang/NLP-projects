@@ -56,8 +56,8 @@
 ## Annotation Samples
 * #### The design layout of the annotation on Amazon Mechanical Turk.
   * Includeing two annotation design pages: 
-  * [Coreference (text) annotation](./annotation_samples/coref_annotation.html) 
-  * [Bounding Box (image) annotation](./annotation_samples/img_annotation.html) 
+  * Coreference (text) annotation 
+  * Bounding Box (image) annotation 
   * Using HTML, CSS, Javascript and Amazon Crowd HTML Elements.
 
 ## :blush: Contact
