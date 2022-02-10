@@ -46,13 +46,18 @@
 * #### Extract sentiment stimulus
   * Perform a name entity recognition task to extract sentences with emotional information.
 
-## Auromatic Speech Recognition
-* #### ASR in Mandarin-English Code-Switching Dataset
-  * Building an ASR system by using kaldi toolkit with Mandarin-English codeswitching dataset SEAME.
+## Automatic Speech Recognition
+* #### :point_right: [ASR in Mandarin-English Code-Switching Dataset](./asr/)
+  * Building an ASR system from scratch
+  * Dataset: [SEAME](https://www.semanticscholar.org/paper/SEAME%3A-a-Mandarin-English-code-switching-speech-in-Lyu-Tan/f28cb37e0f1a225f0d4f27f43ef4e05eee8b321c), 30 hr Mandarin-English codeswitching dataset
+  * Hidden Markov Model (acostic model) + N-gram Languae Model  
+  * Result: Word Error Rate (WER): 64.53%. Character Error Rate (CER): 54.06%
 
 ## Annotation Samples
 * #### The design layout of the annotation on Amazon Mechanical Turk.
-  * Includeing two annotation design pages: coreference (text) annotation & image (bounding box) annotation 
+  * Includeing two annotation design pages: 
+  * [Coreference (text) annotation](./annotation_samples/coref_annotation.html) 
+  * [Bounding Box (image) annotation](./annotation_samples/img_annotation.html) 
   * Using HTML, CSS, Javascript and Amazon Crowd HTML Elements.
 
 ## :blush: Contact
