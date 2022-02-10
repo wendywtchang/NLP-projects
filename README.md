@@ -2,16 +2,20 @@
 > Side projects of NLP works.  
 
 ## Overview
-* [Named Entity Recognition](#named-entity-recognition)
-* [Dialog system](#dialog-system)
-* [Topic Modeling](#topic-modeling)
-* [Emotion analysis](#emotion-analysis)
-* [Auromatic Speech Recognition](#auromatic-speech-recognition)
-* [Annotation Samples](#annotation-samples)
-* Machine Tanslation (Attention, Pretrain)
-* Language Modeling
-* Coreference Resolution in Cooking Recipe
-* Cross-modal Coref. in Recipes
+* Natural Language Processing
+  * [Named Entity Recognition](#named-entity-recognition)
+  * [Dialog system](#dialog-system)
+  * [Topic Modeling](#topic-modeling)
+  * [Emotion analysis](#emotion-analysis)
+* Speech Recognition
+  * [Auromatic Speech Recognition](#auromatic-speech-recognition)
+* Annotation / Web Design
+  * [Annotation Samples](#annotation-samples)
+* Working
+  * Machine Tanslation (Attention, Pretrain)
+  * Language Modeling
+  * Coreference Resolution in Cooking Recipe
+  * Cross-modal Coref. in Recipes
 
 ## Named Entity Recognition
 * #### Slot Filling Task
