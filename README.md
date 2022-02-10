@@ -2,14 +2,18 @@
 > Side projects of NLP works.  
 
 ## Overview
-* [Deep learning](#deep-learning)
+* [Named Entity Recognition](#named-entity-recognition)
 * [Dialog system](#dialog-system)
 * [Topic Modeling](#topic-modeling)
 * [Emotion analysis](#emotion-analysis)
 * [Auromatic Speech Recognition](#auromatic-speech-recognition)
 * [Annotation Samples](#annotation-samples)
+* Machine Tanslation (Attention, Pretrain)
+* Language Modeling
+* Coreference Resolution in Cooking Recipe
+* Cross-modal Coref. in Recipes
 
-## Deep learning
+## Named Entity Recognition
 * #### Slot Filling Task
   * A natural language understanding task to fill slots in dialog system with a digital assistant command dataset. 
   * Using Pytorch and BERT model.
