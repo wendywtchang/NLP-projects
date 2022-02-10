@@ -188,7 +188,7 @@ if load_model:
     load_checkpoint(torch.load("my_checkpoint.pth.tar"), model, optimizer)
 
 
-sentence = "ein boot mit mehreren männern darauf wird von einem großen pferdegespann ans ufer gezogen."
+sentence = "meine schwester hat einen roten schal in einem geschäft in der nähe gekauft."
 
 for epoch in range(num_epochs):
     print(f"[Epoch {epoch} / {num_epochs}]")
