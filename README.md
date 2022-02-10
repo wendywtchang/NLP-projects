@@ -1,8 +1,7 @@
-# NLP Projects
+# :runner: NLP Projects
 > Side projects of NLP works.  
-> For detailed information, please click into the directory you're interested.
 
-## Introduction
+## Overview
 * [Deep learning](#deep-learning)
 * [Dialog system](#dialog-system)
 * [Topic Modeling](#topic-modeling)
@@ -22,12 +21,20 @@
 
 
 ## Topic Modeling
-* #### Topic Modeling in COVID-19 Papers in PubMed
-  * Apply LDA model, an unsupervised approach, to explore different topics in abstracts of COVID-19 papers.
+* #### :point_right: [Topic Modeling in COVID-19 Papers in PubMed](./topic_modeling/LDA_Covid19.ipynb)
+  * Apply Latent Dirichlet Allocation (LDA) Model, an unsupervised approach. 
+  * Explore different topics in COVID-19 related papers' abstract from [PubMed](https://pubmed.ncbi.nlm.nih.gov/).
+  * Result: The best model categorized the articles into 15 topics with the (log) perplexity of -7.82 and the coherence score of 0.56. 
+  * Visualization: pyLDAvis library.
 
 ## Emotion analysis
-* #### Sentiment Classifiers 
-  * Building a LSTM model by using keras to classify six different sentiments. 
+* #### :point_right: [Sentiment Classifiers](./emotion_analysis/Sentiment_Classifier.ipynb) 
+  * Dataset: Multimodal EmotionLines Dataset - [MELD](https://affective-meld.github.io/) 
+  * Building a LSTM model by using keras to classify 7 different sentiments. 
+  * Tensorfolw / Keras
+  * Ekman 6 emotions + Neutral.
+  * Results: 30 epoch, F1 = 26%
+  * Visualization: Matplotlib
 * #### Extract sentiment stimulus
   * Perform a name entity recognition task to extract sentences with emotional information.
 
@@ -40,5 +47,5 @@
   * Includeing two annotation design pages: coreference (text) annotation & image (bounding box) annotation 
   * Using HTML, CSS, Javascript and Amazon Crowd HTML Elements.
 
-## Contact
+## :blush: Contact
 Feel free to contact me! [@wendywtchang](<mailto:wentseng.chang@gmail.com>) 
