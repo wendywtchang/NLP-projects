@@ -25,7 +25,7 @@
   * Using Pytorch and BERT model.
 
 ### Dialog system
-* #### Relation Prediction of Semantic Parser in Knowledge Base Question Answering
+* #### [Relation Prediction of Semantic Parser in Knowledge Base Question Answering](./dialog_system/)
   * Predict the relation given a question from Wikidata. 
   * Question sentences are processed with BERT embedding and predicted by a MLP model.
 
