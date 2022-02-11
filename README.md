@@ -48,7 +48,7 @@
   * Perform a name entity recognition task to extract sentences with emotional information.
 
 ### Machine Translation
-* #### [Seq2Seq MT](./neural_machine_translation/NMT_seq2seq.ipynb)
+* #### [Seq2Seq MT (Results)](./neural_machine_translation/NMT_seq2seq.ipynb), [Main Python Script](./neural_machine_translation/seq2seq_model_v1.7.py)
   * Dataset: [Multi30k](https://aclanthology.org/W16-3210.pdf): Multi30K - Multilingual English-German Image Descriptions
   * Task: Translate German to English
   * Model: Sequence to sequence model, two LSTM as encoder and decoder
