@@ -20,6 +20,10 @@
 
 ## :star: Natural Language Processing
 ### Named Entity Recognition
+* ### [NER spaCy transformer](./named_entity_recognition/tutorial_ner_spacy.ipynb)
+  * Use spaCy transformer to train a NER model (roberta-based)
+  * Dataset: New York Times Relation Extraction Dataset, imbalanced dataset
+  
 * #### Slot Filling Task
   * A natural language understanding task to fill slots in dialog system with a digital assistant command dataset. 
   * Using Pytorch and BERT model.
