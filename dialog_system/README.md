@@ -42,7 +42,7 @@
 Here is a demo of using adviser system in QA domain with our model.  
 ![Adviser QA Demo](./img/adviser_demo.png)  
 
-* It can answer simple worldwide knowledge questions. (latest update: Oct. 2020)
+* It can answer simple worldwide knowledge questions. 
 * The model reaches macro F1 83%
 
 
