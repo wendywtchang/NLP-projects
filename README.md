@@ -69,7 +69,7 @@
 
 
 ## :pencil2: Annotation
-### Annotation Samples
+### [Annotation Samples](./annotation_samples/)
 * #### The design layout of the annotation on Amazon Mechanical Turk.
   * Includeing two annotation design pages: 
   * Coreference (text) annotation 
